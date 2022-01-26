@@ -34,13 +34,10 @@ describe Oystercard do
 
   it "checks that touching in and out creates journey" do
     subject.top_up(20)
-    subject.touch_in(entry_station) # {:entry => entry_station}
-    subject.touch_out(exit_station) # [{:entry => entry_station}, {:exit=> exit_station}]
+    subject.touch_in(entry_station) 
+    subject.touch_out(exit_station) 
     expect(subject.journey_history).to include({:entry => entry_station, :exit => exit_station})
   end
 
 
 end
-
-
-
