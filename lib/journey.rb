@@ -25,11 +25,12 @@ class Journey
   end
 
   def complete?
-    if @entry != nil && @exit != nil
-      true
-    else
-      false
-    end
+    @entry != nil && @exit != nil ? true : false
+    # if @entry != nil && @exit != nil
+    #   true
+    # else
+    #   false
+    # end
   end
 
 
